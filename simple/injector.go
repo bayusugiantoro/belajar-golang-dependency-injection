@@ -5,7 +5,7 @@ package simple
 
 import "github.com/google/wire"
 
-func InitializedService(isError bool) (*SimpleService, error) {
+func InitializedService() *SimpleService {
 	wire.Build(
 		NewSimpleRepository, NewSimpleService,
 	)

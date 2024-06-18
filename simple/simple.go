@@ -3,7 +3,7 @@ package simple
 type SimpleRepository struct {
 }
 
-func NewSimpleRepository(isError bool) *SimpleRepository {
+func NewSimpleRepository() *SimpleRepository {
 	return &SimpleRepository{}
 }
 
@@ -11,7 +11,7 @@ type SimpleService struct {
 	*SimpleRepository
 }
 
-func NewSimpleService(repository *SimpleRepository) (*SimpleService, error) {
+func NewSimpleService(repository *SimpleRepository) *SimpleService {
 	return &SimpleService{
 		SimpleRepository: repository,
 	}
